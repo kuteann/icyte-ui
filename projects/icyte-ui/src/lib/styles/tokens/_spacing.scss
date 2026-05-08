@@ -1,0 +1,75 @@
+/* Base spacing unit (do NOT use directly in components) */
+$space-unit: 4px;
+
+/* -----------------------------------------------------
+   Spacing Scale (multiples of base unit)
+   ----------------------------------------------------- */
+$space-0: 0;
+$space-1: $space-unit * 1;  // 4px
+$space-2: $space-unit * 2;  // 8px
+$space-3: $space-unit * 3;  // 12px
+$space-4: $space-unit * 4;  // 16px
+$space-5: $space-unit * 5;  // 20px
+$space-6: $space-unit * 6;  // 24px
+$space-8: $space-unit * 8;  // 32px
+$space-10: $space-unit * 10; // 40px
+$space-12: $space-unit * 12; // 48px
+$space-16: $space-unit * 16; // 64px
+$space-20: $space-unit * 20; // 80px
+$space-24: $space-unit * 24; // 96px   
+$space-32: $space-unit * 32; // 128px
+$space-40: $space-unit * 40; // 160px
+$space-48: $space-unit * 48; // 192px
+$space-64: $space-unit * 64; // 256px
+
+/* -----------------------------------------------------
+   Spacing Map for utilities
+   ----------------------------------------------------- */
+$spacing-map: (
+  0: $space-0,
+  1: $space-1,
+  2: $space-2,
+  3: $space-3,
+  4: $space-4,
+  5: $space-5,
+  6: $space-6,
+  8: $space-8,
+  10: $space-10,
+  12: $space-12,
+  16: $space-16,
+  20: $space-20,
+  24: $space-24,
+  32: $space-32,
+  40: $space-40,
+  48: $space-48,
+  64: $space-64   
+);
+
+/* -----------------------------------------------------
+   Semantic spacing tokens (RECOMMENDED usage)
+   ----------------------------------------------------- */
+$space-xs: $space-1;   // 4px
+$space-sm: $space-2;   // 8px
+$space-md: $space-3;   // 12px
+$space-lg: $space-4;   // 16px
+$space-xl: $space-6;   // 24px
+$space-2xl: $space-12; // 48px
+
+/* -----------------------------------------------------
+   Component-specific spacing
+   ----------------------------------------------------- */
+$space-button-padding-x: $space-md;
+$space-button-padding-y: $space-sm;
+
+$space-card-padding: $space-lg;
+$space-input-padding: $space-sm;
+$space-modal-padding: $space-xl;
+
+/* -----------------------------------------------------
+   Breakpoints
+   ----------------------------------------------------- */
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px
+);

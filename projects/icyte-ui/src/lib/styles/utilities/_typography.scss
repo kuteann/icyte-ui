@@ -1,0 +1,144 @@
+
+@use '../tokens/typography' as *;
+
+/* =====================================
+   BASE TYPOGRAPHY
+===================================== */
+
+.ic-font-base {
+  font-family: $ic-font-sans;
+}
+
+
+/* =====================================
+   HEADINGS
+===================================== */
+
+.ic-h1 {
+  font-size: $ic-text-4xl;
+  font-weight: $ic-weight-bold;
+  line-height: $ic-leading-tight;
+}
+
+.ic-h2 {
+  font-size: $ic-text-3xl;
+  font-weight: $ic-weight-semibold;
+}
+
+.ic-h3 {
+  font-size: $ic-text-2xl;
+  font-weight: $ic-weight-semibold;
+}
+
+.ic-h4 {
+  font-size: $ic-text-xl;
+  font-weight: $ic-weight-medium;
+}
+
+.ic-h5 {
+  font-size: $ic-text-lg;
+  font-weight: $ic-weight-medium;
+}
+
+.ic-h6 {
+  font-size: $ic-text-md;
+  font-weight: $ic-weight-medium;
+}
+
+
+/* =====================================
+   BODY & LEAD
+===================================== */
+
+.ic-body-lg {
+  font-size: $ic-text-md;
+  line-height: $ic-leading-normal;
+  font-weight: $ic-weight-regular;
+}
+
+.ic-body-sm {
+  font-size: $ic-text-sm;
+  line-height: $ic-leading-normal;
+  font-weight: $ic-weight-regular;
+}
+
+.ic-lead {
+  font-size: $ic-text-lg;
+  font-weight: $ic-weight-regular;
+}
+
+
+/* =====================================
+   TEXT SIZE UTILITIES
+===================================== */
+
+.ic-text-xs { font-size: $ic-text-xs; }
+.ic-text-sm { font-size: $ic-text-sm; }
+.ic-text-md { font-size: $ic-text-md; }
+.ic-text-lg { font-size: $ic-text-lg; }
+.ic-text-xl { font-size: $ic-text-xl; }
+.ic-text-2xl { font-size: $ic-text-2xl; }
+.ic-text-3xl { font-size: $ic-text-3xl; }
+.ic-text-4xl { font-size: $ic-text-4xl; }
+
+
+/* =====================================
+   BLOCKQUOTE
+===================================== */
+
+.ic-blockquote {
+  font-size: $ic-text-lg;
+  font-weight: $ic-weight-medium;
+  line-height: $ic-leading-relaxed;
+}
+
+
+/* =====================================
+   EMPHASIS TEXT
+===================================== */
+
+.ic-caps {
+  font-size: $ic-text-sm;
+  font-weight: $ic-weight-medium;
+  text-transform: uppercase;
+  letter-spacing: $ic-tracking-wide;
+}
+
+.ic-small {
+  font-size: $ic-text-sm;
+  font-weight: $ic-weight-regular;
+}
+
+.ic-tiny {
+  font-size: $ic-text-xs;
+  font-weight: $ic-weight-medium;
+}
+
+
+/* =====================================
+   FONT WEIGHT UTILITIES
+===================================== */
+
+.ic-font-light { font-weight: $ic-weight-light; }
+.ic-font-regular { font-weight: $ic-weight-regular; }
+.ic-font-medium { font-weight: $ic-weight-medium; }
+.ic-font-semibold { font-weight: $ic-weight-semibold; }
+.ic-font-bold { font-weight: $ic-weight-bold; }
+
+
+/* =====================================
+   LINE HEIGHT UTILITIES
+===================================== */
+
+.ic-leading-tight { line-height: $ic-leading-tight; }
+.ic-leading-normal { line-height: $ic-leading-normal; }
+.ic-leading-relaxed { line-height: $ic-leading-relaxed; }
+
+
+/* =====================================
+   LETTER SPACING UTILITIES
+===================================== */
+
+.ic-tracking-tight { letter-spacing: $ic-tracking-tight; }
+.ic-tracking-normal { letter-spacing: $ic-tracking-normal; }
+.ic-tracking-wide { letter-spacing: $ic-tracking-wide; }

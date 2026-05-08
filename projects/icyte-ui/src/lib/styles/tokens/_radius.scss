@@ -1,0 +1,28 @@
+/* Basic radius scale */
+$radius-none: 0;
+$radius-xs: 2px;
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-2xl: 16px;
+$radius-pill: 9999px;
+
+/* Semantic radius tokens (recommended) */
+$radius-button: $radius-md;
+$radius-card: $radius-lg;
+$radius-input: $radius-sm;
+$radius-modal: $radius-xl;
+$radius-badge: $radius-pill;
+
+/* Optional: Map for programmatic usage */
+$radius-map: (
+  none: $radius-none,
+  xs: $radius-xs,
+  sm: $radius-sm,
+  md: $radius-md,
+  lg: $radius-lg,
+  xl: $radius-xl,
+  2xl: $radius-2xl,
+  pill: $radius-pill
+);

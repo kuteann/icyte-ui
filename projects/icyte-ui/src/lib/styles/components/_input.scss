@@ -1,0 +1,247 @@
+
+@use '../tokens/spacing' as *;
+@use '../tokens/typography' as *;
+@use '../tokens/colors' as *;
+@use '../tokens/radius' as *;
+
+/* -----------------------------------------------------
+Base Wrapper & Anatomy
+----------------------------------------------------- */
+
+
+.ic-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+  max-width: 320px;
+  position: relative;
+  font-family: $ic-font-sans;
+}
+
+/* -----------------------------------------------------
+Label
+----------------------------------------------------- */
+
+.ic-input-label {
+  font-size: $ic-text-sm;
+  font-weight: $ic-weight-regular;
+  color: $ic-text-secondary-color;
+}
+
+/* -----------------------------------------------------
+Base Input
+----------------------------------------------------- */
+
+.ic-input {
+  width: 100%;
+  padding: $space-sm $space-md;
+  font-size: $ic-text-sm;
+  line-height: $ic-leading-tight;
+  font-weight: $ic-weight-regular;
+  color: $ic-text-primary-color;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $ic-border-primary;
+  border-radius: $radius-input;
+
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+    box-sizing: border-box;
+   min-height: 36px;
+  &::placeholder {
+    color: $ic-color-gray;
+    opacity: $ic-opacity-60;
+  }
+}
+
+/* -----------------------------------------------------
+Inactive (Default)
+----------------------------------------------------- */
+
+.ic-input:hover {
+  border-color: rgba($ic-color-black, $ic-opacity-60);
+}
+
+/* -----------------------------------------------------
+Inactive (Default)
+----------------------------------------------------- */
+
+.ic-input:focus,
+.ic-input:active {
+  border-color: $ic-color-blue;
+  box-shadow: 0 0 0 1px rgba($ic-color-blue, $ic-opacity-40);
+}
+
+/* -----------------------------------------------------
+Inactive (Default)
+----------------------------------------------------- */
+
+.ic-input:disabled {
+  background-color: #f3f3f3;
+  color: $ic-color-gray;
+  cursor: not-allowed;
+  opacity: $ic-opacity-60;
+}
+
+/* -----------------------------------------------------
+Readonly
+----------------------------------------------------- */
+
+.ic-input[readonly] {
+  background-color: #fafafa;
+  border-color: $ic-color-gray;
+  color: $ic-color-gray;
+}
+
+/* -----------------------------------------------------
+ Success (Complete)
+----------------------------------------------------- */
+
+.ic-input-success {
+  border-color: $ic-color-green;
+}
+
+.ic-input-success:focus {
+  box-shadow: 0 0 0 1px rgba($ic-color-green, $ic-opacity-40);
+}
+
+/* -----------------------------------------------------
+ Error
+----------------------------------------------------- */
+
+.ic-input-error {
+  border-color: $ic-color-danger;
+}
+
+.ic-input-error:focus {
+  box-shadow: 0 0 0 1px rgba($ic-color-danger, $ic-opacity-40);
+}
+
+/* -----------------------------------------------------
+ Error
+----------------------------------------------------- */
+
+.ic-helper-text {
+  font-size: $ic-text-xs;
+  line-height: $ic-leading-tight;
+  color: $ic-color-gray;
+}
+
+.ic-helper-text-error {
+  color: $ic-color-danger;
+}
+
+.ic-helper-text-success {
+  color: $ic-color-green;
+}
+
+/* -----------------------------------------------------
+ Input With Icons (Anatomy from Screenshot)
+----------------------------------------------------- */
+
+.ic-input-with-leading {
+  padding-left: $space-8;
+}
+
+.ic-input-with-trailing {
+  padding-right: $space-12;
+}
+
+.ic-leading-icon,
+.ic-trailing-icon {
+  position: absolute;
+  top: 68%;
+  transform: translateY(-50%);
+  opacity: $ic-opacity-80;
+  pointer-events: none;
+  font-size: $ic-text-xl;
+}
+
+.ic-leading-icon {
+  left: $space-sm;
+}
+
+.ic-trailing-icon {
+  right: $space-3;
+  top: $space-10;
+}
+
+/* -----------------------------------------------------
+Normal
+----------------------------------------------------- */
+
+.ic-input-normal {
+  @extend .ic-input;
+}
+
+/* -----------------------------------------------------
+Search
+----------------------------------------------------- */
+
+.ic-input-search {
+  @extend .ic-input;
+  padding-left: $space-8;
+}
+
+/* -----------------------------------------------------
+Password
+----------------------------------------------------- */
+
+.ic-input-password {
+  @extend .ic-input;
+  padding-right: $space-10;
+}
+
+/* -----------------------------------------------------
+Select / Dropdown
+----------------------------------------------------- */
+
+.ic-select {
+  @extend .ic-input;
+  appearance: none;
+  background-color: #ffffff;
+}
+
+/* -----------------------------------------------------
+Numeric / Price / Value
+----------------------------------------------------- */
+
+.ic-input-numeric {
+  @extend .ic-input;
+  text-align: left;
+}
+
+/* -----------------------------------------------------
+Date Field
+----------------------------------------------------- */
+
+.ic-input-date {
+  @extend .ic-input;
+  padding-right: $space-4;
+}
+
+/* -----------------------------------------------------
+Textarea (Description field)
+----------------------------------------------------- */
+
+.ic-textarea {
+  @extend .ic-input;
+  min-height: 96px;
+  resize: vertical;
+}
+
+/* -----------------------------------------------------
+Autocomplete / Dropdown Menu (Optional)
+----------------------------------------------------- */
+
+.ic-autocomplete-menu {
+  margin-top: $space-xs;
+  padding: $space-sm 0;
+  background-color: #ffffff;
+  border: 1px solid $ic-color-gray;
+  border-radius: $radius-md;
+}

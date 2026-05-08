@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "7ce671b9-22a4-43cb-bbad-0ed46651d614"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -26,10 +27,12 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "projects/icyte-ui/src/lib/assets/fonts",
+                "output": "assets/fonts"
               }
             ],
             "styles": [
+              "projects/icyte-ui/src/lib/styles/icyte-ui.scss",
               "src/styles.scss"
             ],
             "server": "src/main.server.ts",
@@ -79,6 +82,32 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        }
+      }
+    },
+    "icyte-ui": {
+      "projectType": "library",
+      "root": "projects/icyte-ui",
+      "sourceRoot": "projects/icyte-ui/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/icyte-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/icyte-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/icyte-ui/tsconfig.spec.json"
+          }
         }
       }
     }

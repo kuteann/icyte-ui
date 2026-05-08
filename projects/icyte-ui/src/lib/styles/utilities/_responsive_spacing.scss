@@ -1,0 +1,14 @@
+@use '../tokens/spacing' as *;
+
+@each $bp, $size in $breakpoints {
+  @media (min-width: $size) {
+
+    @each $key, $value in $spacing-map {
+
+      .#{$bp}-p-#{$key} { padding: $value; }
+      .#{$bp}-m-#{$key} { margin: $value; }
+      .#{$bp}-gap-#{$key} { gap: $value; }
+
+    }
+  }
+}

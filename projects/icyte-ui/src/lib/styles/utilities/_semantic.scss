@@ -1,0 +1,13 @@
+@use '../tokens/spacing' as *;
+
+.p-sm  { padding: $space-sm; }
+.p-md  { padding: $space-md; }
+.p-lg  { padding: $space-lg; }
+
+.m-sm  { margin: $space-sm; }
+.m-md  { margin: $space-md; }
+.m-lg  { margin: $space-lg; }
+
+.gap-sm { gap: $space-sm; }
+.gap-md { gap: $space-md; }
+.gap-lg { gap: $space-lg; }

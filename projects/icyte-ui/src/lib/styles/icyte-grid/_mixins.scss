@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "variables" as *;
+
+// Media query mixin
+@mixin respond($breakpoint) {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Column width calculator
+@mixin make-col($span) {
+  flex: 0 0 percentage($span / $grid-columns);
+  max-width: percentage($span / $grid-columns);
+}

@@ -1,0 +1,20 @@
+@use '../tokens/spacing' as *;
+
+@each $key, $value in $spacing-map {
+
+  .m-#{$key}   { margin: $value; }
+  .mt-#{$key}  { margin-top: $value; }
+  .mr-#{$key}  { margin-right: $value; }
+  .mb-#{$key}  { margin-bottom: $value; }
+  .ml-#{$key}  { margin-left: $value; }
+
+  .mx-#{$key}  {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$key}  {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}

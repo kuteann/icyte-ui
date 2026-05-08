@@ -1,0 +1,33 @@
+$ic-font-sans: "Roboto",
+system-ui,
+-apple-system,
+"Segoe UI",
+sans-serif;
+
+/* Font sizes */
+$ic-text-xs: 0.75rem; /* 12px */
+$ic-text-sm: 0.875rem; /* 14px */
+$ic-text-md: 1rem; /* 16px */
+$ic-text-lg: 1.125rem; /* 18px */
+$ic-text-xl: 1.25rem; /* 20px */
+$ic-text-2xl: 1.5rem; /* 24px */
+$ic-text-3xl: 1.875rem; /* 30px */
+$ic-text-4xl: 2.25rem; /* 36px */
+
+/* Font weights */
+$ic-weight-light: 300;
+$ic-weight-regular: 400;
+$ic-weight-medium: 500;
+$ic-weight-semibold: 600;
+$ic-weight-bold: 700;
+
+/* Line heights */
+$ic-leading-tight: 1.2;
+$ic-leading-normal: 1.5;
+$ic-leading-relaxed: 1.75;
+
+
+/* Letter spacing */
+$ic-tracking-tight: -0.02em;
+$ic-tracking-normal: 0;
+$ic-tracking-wide: 0.05em;

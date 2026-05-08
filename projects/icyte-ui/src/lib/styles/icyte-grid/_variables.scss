@@ -1,0 +1,12 @@
+// Breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+// Grid settings
+$grid-columns: 12;
+$gutter: 16px;
+$container-max-width: 1200px;

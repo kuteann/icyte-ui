@@ -1,0 +1,7 @@
+@use '../tokens/spacing' as *;
+
+@each $key, $value in $spacing-map {
+  .gap-#{$key} {
+    gap: $value;
+  }
+}

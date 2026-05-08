@@ -1,0 +1,18 @@
+@use '../tokens/width' as *;
+
+/* ===============================
+   WIDTH UTILITIES
+================================ */
+
+@each $key, $value in $ic-width-map {
+  .ic-w-#{$key} {
+    width: $value;
+  }
+}
+
+
+@each $value in $ic-manual-widths {
+  .ic-w-#{$value} {
+    width: #{$value}px;
+  }
+}

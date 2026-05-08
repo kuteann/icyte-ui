@@ -1,0 +1,27 @@
+/* ===============================
+   HEIGHT TOKENS
+================================ */
+
+/* Component-aligned sizes */
+$ic-height-xs: 32px;
+$ic-height-sm: 40px;
+$ic-height-md: 48px;
+$ic-height-lg: 56px;
+$ic-height-xl: 64px;
+
+/* Fluid heights */
+$ic-height-auto: auto;
+$ic-height-full: 100%;
+
+
+$ic-height-map: (
+  auto: $ic-height-auto,
+  xs: $ic-height-xs,
+  sm: $ic-height-sm,
+  md: $ic-height-md,
+  lg: $ic-height-lg,
+  xl: $ic-height-xl,
+  full: $ic-height-full
+);
+
+$ic-manual-heights: ( 2, 4, 8, 12, 16, 20, 24, 32, 36, 40, 42, 48, 56, 64, 72, 80, 96, 120, 160, 200, 240, 320, 400, 480, 600, 720, 960);

@@ -1,0 +1,389 @@
+/* =====================================================
+   ICYTE UI – Button Component
+   ===================================================== */
+
+@use '../tokens/colors';
+@use '../tokens/spacing';
+@use '../tokens/radius';
+@use '../tokens/typography';
+
+/* -----------------------------------------------------
+   Base Button
+   ----------------------------------------------------- */
+.ic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: spacing.$space-1;
+
+  font-family: typography.$ic-font-sans;
+  font-weight: typography.$ic-weight-regular;
+  line-height: typography.$ic-leading-normal;
+  white-space: nowrap;
+
+  border-radius: radius.$radius-button;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+
+  // min-width: 100px;
+  transition: background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+  &:disabled,
+  &.ic-btn-disabled {
+    cursor: not-allowed;
+    opacity: colors.$ic-opacity-40;
+  }
+}
+
+/* -----------------------------------------------------
+   Button Sizes (SM / MD / LG)
+   ----------------------------------------------------- */
+.ic-btn-sm {
+  height: 32px;
+  padding: 0 spacing.$space-xl;
+  font-size: typography.$ic-text-xs;
+}
+
+.ic-btn-md {
+  height: 36px;
+  padding: 0 spacing.$space-xl;
+  font-size: typography.$ic-text-sm;
+}
+
+.ic-btn-lg {
+  height: 40px;
+  padding: 0 spacing.$space-xl;
+  font-size: typography.$ic-text-md;
+}
+
+/* Icon‑only buttons */
+.ic-btn-icon-sm {
+  padding: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.ic-btn-icon-md {
+  padding: 0;
+  width: 36px;
+  height: 36px;
+}
+
+.ic-btn-icon-lg {
+  padding: 0;
+  width: 40px;
+}
+
+/* -----------------------------------------------------
+   Button Types
+   ----------------------------------------------------- */
+
+/* PRIMARY */
+.ic-btn-primary {
+  background-color: colors.$ic-color-blue;
+  color: #ffffff;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-blue, colors.$ic-opacity-80);
+  }
+
+  &:active {
+    background-color: colors.$ic-color-blue;
+  }
+
+  &:disabled {
+    background-color: colors.$ic-color-blue;
+  }
+}
+
+/* SECONDARY */
+.ic-btn-secondary {
+  background-color: rgba(colors.$ic-color-gray, colors.$ic-opacity-5);
+  color: colors.$ic-color-blue;
+  border: 1px solid colors.$ic-border-primary;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-blue, colors.$ic-opacity-80);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: colors.$ic-color-blue;
+  }
+
+  &:disabled {
+    color: colors.$ic-color-gray;
+    border-color: colors.$ic-color-gray;
+  }
+}
+
+// /* TERTIARY */
+// .ic-btn-tertiary {
+//   background-color: transparent;
+//   color: colors.$ic-color-blue;
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: rgba(colors.$ic-color-gray, colors.$ic-opacity-40);
+
+//   &:hover {
+//     background-color: rgba(colors.$ic-color-gray, colors.$ic-opacity-10);
+//   }
+
+//   &:active {
+//     background-color: rgba(colors.$ic-color-gray, colors.$ic-opacity-20);
+//   }
+
+
+//   &:disabled {
+//     color: colors.$ic-color-gray;
+//   }
+// }
+
+/* LINK */
+.ic-btn-link {
+  background-color: transparent;
+  color: colors.$ic-color-blue;
+  padding: 0;
+  height: auto;
+  border-radius: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    color: colors.$ic-color-gray;
+  }
+}
+
+/* -----------------------------------------------------
+   Icon Alignment Variants (as per guideline)
+   ----------------------------------------------------- */
+.ic-btn-icon-left {
+  flex-direction: row;
+}
+
+.ic-btn-icon-right {
+  flex-direction: row-reverse;
+}
+
+/* -----------------------------------------------------
+   Loading State
+   ----------------------------------------------------- */
+.ic-btn-loading {
+  pointer-events: none;
+  opacity: colors.$ic-opacity-60;
+}
+
+/* -----------------------------------------------------
+   Green Button
+   ----------------------------------------------------- */
+
+.ic-btn-green {
+  background-color: colors.$ic-color-green;
+  color: #ffffff;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-green, colors.$ic-opacity-80);
+  }
+
+  &:active {
+    background-color: colors.$ic-color-dark-green;
+  }
+
+  &:disabled {
+    background-color: colors.$ic-color-green;
+    opacity: colors.$ic-opacity-40;
+  }
+}
+
+.ic-btn-secondary-green {
+  background-color: #ffffff;
+  color: colors.$ic-color-green;
+  border: 1px solid colors.$ic-color-green;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-green, colors.$ic-opacity-80);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: colors.$ic-color-dark-green;
+  }
+
+  &:disabled {
+    color: colors.$ic-color-gray;
+    border-color: colors.$ic-color-gray;
+  }
+}
+
+
+/* -----------------------------------------------------
+   DARK BLUE BUTTON
+   ----------------------------------------------------- */
+
+.ic-btn-dark-blue {
+  background-color: colors.$ic-color-dark-blue;
+  color: #ffffff;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-dark-blue, colors.$ic-opacity-80);
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-dark-blue, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    background-color: colors.$ic-color-dark-blue;
+    opacity: colors.$ic-opacity-40;
+  }
+}
+
+.ic-btn-secondary-dark-blue {
+  background-color: #ffffff;
+  color: colors.$ic-color-dark-blue;
+  border: 1px solid colors.$ic-color-dark-blue;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-dark-blue, colors.$ic-opacity-80);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-dark-blue, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    color: colors.$ic-color-gray;
+    border-color: colors.$ic-color-gray;
+  }
+}
+
+/* -----------------------------------------------------
+   PURPLE BUTTON
+   ----------------------------------------------------- */
+
+.ic-btn-purple {
+  background-color: colors.$ic-color-purple;
+  color: #ffffff;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-purple, colors.$ic-opacity-80);
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-purple, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    background-color: colors.$ic-color-purple;
+    opacity: colors.$ic-opacity-40;
+  }
+}
+
+.ic-btn-secondary-purple {
+  background-color: #ffffff;
+  color: colors.$ic-color-purple;
+  border: 1px solid colors.$ic-color-purple;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-purple, colors.$ic-opacity-80);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-purple, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    color: colors.$ic-color-gray;
+    border-color: colors.$ic-color-gray;
+  }
+}
+
+/* -----------------------------------------------------
+DANGER BUTTON
+   ----------------------------------------------------- */
+.ic-btn-danger {
+  background-color: colors.$ic-color-danger;
+  color: #ffffff;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-danger, colors.$ic-opacity-80);
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-danger, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    background-color: colors.$ic-color-danger;
+    opacity: colors.$ic-opacity-40;
+  }
+}
+
+.ic-btn-secondary-danger {
+  background-color: #ffffff;
+  color: colors.$ic-color-danger;
+  border: 1px solid colors.$ic-color-danger;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-danger, colors.$ic-opacity-80);
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-danger, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    color: colors.$ic-color-gray;
+    border-color: colors.$ic-color-gray;
+  }
+}
+
+
+/* -----------------------------------------------------
+WARNING BUTTON
+   ----------------------------------------------------- */
+
+.ic-btn-warning {
+  background-color: colors.$ic-color-warning;
+  color: #000000;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-warning, colors.$ic-opacity-80);
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-warning, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    background-color: colors.$ic-color-warning;
+    opacity: colors.$ic-opacity-40;
+  }
+}
+
+.ic-btn-secondary-warning {
+  background-color: #ffffff;
+  color: colors.$ic-color-warning;
+  border: 1px solid colors.$ic-color-warning;
+
+  &:hover {
+    background-color: rgba(colors.$ic-color-warning, colors.$ic-opacity-80);
+    color: #000000;
+  }
+
+  &:active {
+    background-color: rgba(colors.$ic-color-warning, colors.$ic-opacity-60);
+  }
+
+  &:disabled {
+    color: colors.$ic-color-gray;
+    border-color: colors.$ic-color-gray;
+  }
+}

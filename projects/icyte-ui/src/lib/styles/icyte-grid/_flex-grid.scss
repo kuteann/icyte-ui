@@ -1,0 +1,13 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.ic-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: calc(-1 * $gutter / 2);
+}
+
+.ic-col {
+  padding-inline: calc($gutter / 2);
+  flex: 1 0 0%;
+}

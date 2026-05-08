@@ -1,0 +1,18 @@
+@use '../tokens/height' as *;
+
+/* ===============================
+   HEIGHT UTILITIES
+================================ */
+
+@each $key, $value in $ic-height-map {
+  .ic-h-#{$key} {
+    height: $value;
+  }
+}
+
+
+@each $value in $ic-manual-heights {
+  .ic-h-#{$value} {
+    height: #{$value}px;
+  }
+}

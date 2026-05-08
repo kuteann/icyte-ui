@@ -1,0 +1,124 @@
+@use '../tokens/colors' as *;
+
+/* ----------------------------------
+   TEXT COLORS
+---------------------------------- */
+
+.ic-text-blue { color: $ic-color-blue; }
+.ic-text-green { color: $ic-color-green; }
+.ic-text-dark-blue { color: $ic-color-dark-blue; }
+.ic-text-dark-green { color: $ic-color-dark-green; }
+.ic-text-purple { color: $ic-color-purple; }
+
+.ic-text-danger { color: $ic-color-danger; }
+.ic-text-warning { color: $ic-color-warning; }
+
+.ic-text-black { color: $ic-color-black; }
+.ic-text-gray { color: $ic-color-gray; }
+
+.ic-text-primary { color: $ic-text-primary-color; }
+.ic-text-secondary { color: $ic-text-secondary-color; }
+
+/* ----------------------------------
+   BACKGROUND COLORS
+---------------------------------- */
+
+.ic-bg-blue { background-color: $ic-color-blue; }
+.ic-bg-green { background-color: $ic-color-green; }
+.ic-bg-dark-blue { background-color: $ic-color-dark-blue; }
+.ic-bg-dark-green { background-color: $ic-color-dark-green; }
+.ic-bg-purple { background-color: $ic-color-purple; }
+
+.ic-bg-danger { background-color: $ic-color-danger; }
+.ic-bg-warning { background-color: $ic-color-warning; }
+
+.ic-bg-black { background-color: $ic-color-black; }
+.ic-bg-gray { background-color: $ic-color-gray; }
+
+
+/* ----------------------------------
+   BORDER COLORS
+---------------------------------- */
+
+.ic-border-blue { border-color: $ic-color-blue; }
+.ic-border-green { border-color: $ic-color-green; }
+.ic-border-dark-blue { border-color: $ic-color-dark-blue; }
+.ic-border-dark-green { border-color: $ic-color-dark-green; }
+.ic-border-purple { border-color: $ic-color-purple; }
+
+.ic-border-danger { border-color: $ic-color-danger; }
+.ic-border-warning { border-color: $ic-color-warning; }
+
+.ic-border-black { border-color: $ic-color-black; }
+.ic-border-gray { border-color: $ic-color-gray; }
+
+.ic-border-primary { border-color: $ic-border-primary; }
+
+/* ----------------------------------
+   OPACITY‑BASED BACKGROUND UTILITIES
+---------------------------------- */
+
+/* Blue */
+.ic-bg-blue-100 { background-color: rgba($ic-color-blue, $ic-opacity-100); }
+.ic-bg-blue-80  { background-color: rgba($ic-color-blue, $ic-opacity-80); }
+.ic-bg-blue-60  { background-color: rgba($ic-color-blue, $ic-opacity-60); }
+.ic-bg-blue-40  { background-color: rgba($ic-color-blue, $ic-opacity-40); }
+.ic-bg-blue-20  { background-color: rgba($ic-color-blue, $ic-opacity-20); }
+
+/* Green */
+.ic-bg-green-100 { background-color: rgba($ic-color-green, $ic-opacity-100); }
+.ic-bg-green-80  { background-color: rgba($ic-color-green, $ic-opacity-80); }
+.ic-bg-green-60  { background-color: rgba($ic-color-green, $ic-opacity-60); }
+.ic-bg-green-40  { background-color: rgba($ic-color-green, $ic-opacity-40); }
+.ic-bg-green-20  { background-color: rgba($ic-color-green, $ic-opacity-20); }
+
+/* Dark Blue */
+.ic-bg-dark-blue-100 { background-color: rgba($ic-color-dark-blue, $ic-opacity-100); }
+.ic-bg-dark-blue-80  { background-color: rgba($ic-color-dark-blue, $ic-opacity-80); }
+.ic-bg-dark-blue-60  { background-color: rgba($ic-color-dark-blue, $ic-opacity-60); }
+.ic-bg-dark-blue-40  { background-color: rgba($ic-color-dark-blue, $ic-opacity-40); }
+.ic-bg-dark-blue-20  { background-color: rgba($ic-color-dark-blue, $ic-opacity-20); }
+
+/* Dark Green */
+.ic-bg-dark-green-100 { background-color: rgba($ic-color-dark-green, $ic-opacity-100); }
+.ic-bg-dark-green-80  { background-color: rgba($ic-color-dark-green, $ic-opacity-80); }
+.ic-bg-dark-green-60  { background-color: rgba($ic-color-dark-green, $ic-opacity-60); }
+.ic-bg-dark-green-40  { background-color: rgba($ic-color-dark-green, $ic-opacity-40); }
+.ic-bg-dark-green-20  { background-color: rgba($ic-color-dark-green, $ic-opacity-20); }
+
+/* Purple */
+.ic-bg-purple-100 { background-color: rgba($ic-color-purple, $ic-opacity-100); }
+.ic-bg-purple-80  { background-color: rgba($ic-color-purple, $ic-opacity-80); }
+.ic-bg-purple-60  { background-color: rgba($ic-color-purple, $ic-opacity-60); }
+.ic-bg-purple-40  { background-color: rgba($ic-color-purple, $ic-opacity-40); }
+.ic-bg-purple-20  { background-color: rgba($ic-color-purple, $ic-opacity-20); }
+
+/* Danger */
+.ic-bg-danger-100 { background-color: rgba($ic-color-danger, $ic-opacity-100); }
+.ic-bg-danger-80  { background-color: rgba($ic-color-danger, $ic-opacity-80); }
+.ic-bg-danger-60  { background-color: rgba($ic-color-danger, $ic-opacity-60); }
+.ic-bg-danger-40  { background-color: rgba($ic-color-danger, $ic-opacity-40); }
+.ic-bg-danger-20  { background-color: rgba($ic-color-danger, $ic-opacity-20); }
+
+/* Warning */
+.ic-bg-warning-100 { background-color: rgba($ic-color-warning, $ic-opacity-100); }
+.ic-bg-warning-80  { background-color: rgba($ic-color-warning, $ic-opacity-80); }
+.ic-bg-warning-60  { background-color: rgba($ic-color-warning, $ic-opacity-60); }
+.ic-bg-warning-40  { background-color: rgba($ic-color-warning, $ic-opacity-40); }
+.ic-bg-warning-20  { background-color: rgba($ic-color-warning, $ic-opacity-20); }
+
+/* Black */
+.ic-bg-black-100 { background-color: rgba($ic-color-black, $ic-opacity-100); }
+.ic-bg-black-80  { background-color: rgba($ic-color-black, $ic-opacity-80); }
+.ic-bg-black-60  { background-color: rgba($ic-color-black, $ic-opacity-60); }
+.ic-bg-black-40  { background-color: rgba($ic-color-black, $ic-opacity-40); }
+.ic-bg-black-20  { background-color: rgba($ic-color-black, $ic-opacity-20); }  
+
+/* Gray */
+.ic-bg-gray-100 { background-color: rgba($ic-color-gray, $ic-opacity-100); }
+.ic-bg-gray-80  { background-color: rgba($ic-color-gray, $ic-opacity-80); }
+.ic-bg-gray-60  { background-color: rgba($ic-color-gray, $ic-opacity-60); }
+.ic-bg-gray-40  { background-color: rgba($ic-color-gray, $ic-opacity-40); }
+.ic-bg-gray-20  { background-color: rgba($ic-color-gray, $ic-opacity-20); }
+.ic-bg-gray-10  { background-color: rgba($ic-color-gray, $ic-opacity-10); }
+.ic-bg-gray-5   { background-color: rgba($ic-color-gray, $ic-opacity-5); }

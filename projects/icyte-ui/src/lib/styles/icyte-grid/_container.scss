@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+.ic-container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-inline: auto;
+  padding-inline: $gutter;
+}
+
+.ic-container-fluid {
+  width: 100%;
+  padding-inline: $gutter;
+}

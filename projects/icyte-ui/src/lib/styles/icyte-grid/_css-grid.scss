@@ -1,0 +1,30 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.ic-grid {
+  display: grid;
+  gap: $gutter;
+}
+
+// Auto responsive grid
+.ic-grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+// Fixed grids
+@for $i from 2 through 6 {
+  .ic-grid-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+// Responsive grid columns
+@each $bp, $size in $breakpoints {
+  @include respond($bp) {
+    @for $i from 2 through 6 {
+      .ic-#{$bp}-grid-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
+}
