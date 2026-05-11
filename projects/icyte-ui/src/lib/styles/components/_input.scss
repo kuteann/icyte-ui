@@ -154,7 +154,6 @@ Readonly
 .ic-leading-icon,
 .ic-trailing-icon {
   position: absolute;
-  top: 68%;
   transform: translateY(-50%);
   opacity: $ic-opacity-80;
   pointer-events: none;
@@ -163,6 +162,7 @@ Readonly
 
 .ic-leading-icon {
   left: $space-sm;
+  top: $space-10;
 }
 
 .ic-trailing-icon {

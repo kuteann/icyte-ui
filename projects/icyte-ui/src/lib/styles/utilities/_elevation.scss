@@ -1,0 +1,44 @@
+@use '../tokens/colors' as *;
+
+// ── Shadow tokens ─────────────────────────────
+$ic-shadow-color: rgba($ic-color-dark-blue, 1);
+
+$ic-elevation-1: 0px 1px 2px 0px  rgba($ic-color-dark-blue, 0.06),
+                 0px 1px 3px 0px  rgba($ic-color-dark-blue, 0.10);
+
+$ic-elevation-2: 0px 2px 4px 0px  rgba($ic-color-dark-blue, 0.06),
+                 0px 4px 6px 0px  rgba($ic-color-dark-blue, 0.10);
+
+$ic-elevation-3: 0px 4px 6px 0px  rgba($ic-color-dark-blue, 0.07),
+                 0px 10px 15px 0px rgba($ic-color-dark-blue, 0.10);
+
+$ic-elevation-4: 0px 10px 15px 0px rgba($ic-color-dark-blue, 0.07),
+                 0px 20px 25px 0px rgba($ic-color-dark-blue, 0.10);
+
+$ic-elevation-5: 0px 20px 25px 0px rgba($ic-color-dark-blue, 0.08),
+                 0px 40px 50px 0px rgba($ic-color-dark-blue, 0.12);
+
+$ic-elevation-6: 0px 25px 50px 0px rgba($ic-color-dark-blue, 0.10),
+                 0px 50px 80px 0px rgba($ic-color-dark-blue, 0.15);
+
+// ── Elevation map (for programmatic use) ──────
+$ic-elevation-map: (
+  1: $ic-elevation-1,
+  2: $ic-elevation-2,
+  3: $ic-elevation-3,
+  4: $ic-elevation-4,
+  5: $ic-elevation-5,
+  6: $ic-elevation-6
+);
+
+// ── Utility classes ───────────────────────────
+@each $level, $shadow in $ic-elevation-map {
+  .ic-elevation-#{$level} {
+    box-shadow: $shadow;
+  }
+}
+
+// ── Remove elevation ──────────────────────────
+.ic-elevation-0 {
+  box-shadow: none;
+}

@@ -1,0 +1,30 @@
+@use '../tokens/radius' as *;
+
+// ─────────────────────────────────────────────
+// _radius.scss
+// All class names follow the ic- naming convention
+// ─────────────────────────────────────────────
+
+/* ── Base scale utilities ────────────────────── */
+.ic-radius-none { border-radius: $radius-none; }   // 0
+.ic-radius-xs   { border-radius: $radius-xs; }     // 2px
+.ic-radius-sm   { border-radius: $radius-sm; }     // 4px
+.ic-radius-md   { border-radius: $radius-md; }     // 6px
+.ic-radius-lg   { border-radius: $radius-lg; }     // 8px
+.ic-radius-xl   { border-radius: $radius-xl; }     // 12px
+.ic-radius-2xl  { border-radius: $radius-2xl; }    // 16px
+.ic-radius-pill { border-radius: $radius-pill; }   // 9999px
+
+/* ── Semantic alias utilities ────────────────── */
+.ic-radius-button { border-radius: $radius-button; }  // → $radius-md  (6px)
+.ic-radius-card   { border-radius: $radius-card; }    // → $radius-lg  (8px)
+.ic-radius-input  { border-radius: $radius-input; }   // → $radius-sm  (4px)
+.ic-radius-modal  { border-radius: $radius-modal; }   // → $radius-xl  (12px)
+.ic-radius-badge  { border-radius: $radius-badge; }   // → $radius-pill (9999px)
+
+/* ── Programmatic generation from map ───────── */
+@each $key, $value in $radius-map {
+  .ic-radius-#{$key} {
+    border-radius: $value;
+  }
+}

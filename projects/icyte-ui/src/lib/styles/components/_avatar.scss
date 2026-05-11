@@ -1,0 +1,101 @@
+@use '../tokens/colors' as *;
+@use '../tokens/spacing' as *;
+@use '../tokens/typography' as *;
+
+// ─────────────────────────────────────────────
+// _avatar.scss
+// All values use ic- design tokens — no manual
+// hardcoded property values.
+// ─────────────────────────────────────────────
+
+
+// ── Base avatar ───────────────────────────────
+.ic-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-badge;       // 9999px → full circle
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+
+// ── Photo variant ─────────────────────────────
+.ic-avatar--photo {
+  background-color: transparent;
+}
+
+.ic-avatar__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: $radius-badge;       // 9999px → matches parent circle
+}
+
+
+// ── Initials variant ──────────────────────────
+.ic-avatar--initials {
+  background-color: $ic-color-blue;
+  color: #ffffff;
+  font-weight: $ic-weight-semibold;
+  letter-spacing: $ic-tracking-normal;
+  text-transform: uppercase;
+}
+
+.ic-avatar__initials {
+  line-height: $ic-leading-tight;
+  user-select: none;
+}
+
+
+// ── Size variants ─────────────────────────────
+// Width & height use $ic-manual-widths / heights
+// which generate .ic-w-{n} / .ic-h-{n} utilities.
+// Font sizes use typography tokens directly.
+
+.ic-avatar--28 {
+  @extend .ic-w-28;
+  @extend .ic-h-28;
+
+  .ic-avatar__initials {
+    font-size: $ic-text-xs;           // 10px (smallest token)
+  }
+}
+
+.ic-avatar--30 {
+  @extend .ic-w-30;
+  @extend .ic-h-30;
+
+  .ic-avatar__initials {
+    font-size: $ic-text-xs;           // closest token ≈ 11px
+  }
+}
+
+.ic-avatar--34 {
+  @extend .ic-w-34;
+  @extend .ic-h-34;
+
+  .ic-avatar__initials {
+    font-size: $ic-text-sm;           // 12px
+  }
+}
+
+.ic-avatar--36 {
+  @extend .ic-w-36;
+  @extend .ic-h-36;
+
+  .ic-avatar__initials {
+    font-size: $ic-text-sm;           // 13px → closest token
+  }
+}
+
+.ic-avatar--50 {
+  @extend .ic-w-50;
+  @extend .ic-h-50;
+
+  .ic-avatar__initials {
+    font-size: $ic-text-lg;           // 18px
+  }
+}
