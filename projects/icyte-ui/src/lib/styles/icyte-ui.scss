@@ -3,7 +3,6 @@
 @use './tokens/spacing';
 @use './tokens/typography';
 @use './tokens/colors';
-@use './tokens/radius';
 
 /* Utilities */
 @use './utilities/color';
@@ -29,5 +28,7 @@
 /* Components */
 @use './components/button';
 @use './components/input';
+@use './components/avatar';
+
 
 

@@ -16,3 +16,7 @@
     height: #{$value}px;
   }
 }
+
+@mixin h($value) {
+  height: #{$value}px;
+}

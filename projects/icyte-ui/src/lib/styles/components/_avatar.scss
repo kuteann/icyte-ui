@@ -1,6 +1,9 @@
 @use '../tokens/colors' as *;
 @use '../tokens/spacing' as *;
 @use '../tokens/typography' as *;
+@use '../tokens/radius' as *;
+@use '../utilities/width' as *;
+@use '../utilities/height' as *;
 
 // ─────────────────────────────────────────────
 // _avatar.scss
@@ -56,44 +59,44 @@
 // Font sizes use typography tokens directly.
 
 .ic-avatar--28 {
-  @extend .ic-w-28;
-  @extend .ic-h-28;
+  @include w(28);
+  @include h(28);
 
   .ic-avatar__initials {
     font-size: $ic-text-xs;           // 10px (smallest token)
   }
 }
 
-.ic-avatar--30 {
-  @extend .ic-w-30;
-  @extend .ic-h-30;
+.ic-avatar--32 {
+  @include w(32);
+  @include h(32);
 
   .ic-avatar__initials {
     font-size: $ic-text-xs;           // closest token ≈ 11px
   }
 }
 
-.ic-avatar--34 {
-  @extend .ic-w-34;
-  @extend .ic-h-34;
+.ic-avatar--36 {
+  @include w(36);
+  @include h(36);
 
   .ic-avatar__initials {
     font-size: $ic-text-sm;           // 12px
   }
 }
 
-.ic-avatar--36 {
-  @extend .ic-w-36;
-  @extend .ic-h-36;
+.ic-avatar--40 {
+  @include w(40);
+  @include h(40);
 
   .ic-avatar__initials {
     font-size: $ic-text-sm;           // 13px → closest token
   }
 }
 
-.ic-avatar--50 {
-  @extend .ic-w-50;
-  @extend .ic-h-50;
+.ic-avatar--52 {
+  @include w(52);
+  @include h(52);
 
   .ic-avatar__initials {
     font-size: $ic-text-lg;           // 18px

@@ -1,6 +1,6 @@
 {
   "name": "icyte-ui",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "peerDependencies": {
     "@angular/common": "^21.2.0",
     "@angular/core": "^21.2.0"

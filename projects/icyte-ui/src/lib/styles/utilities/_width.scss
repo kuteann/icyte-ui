@@ -16,3 +16,7 @@
     width: #{$value}px;
   }
 }
+
+@mixin w($value) {
+  width: #{$value}px;
+}
